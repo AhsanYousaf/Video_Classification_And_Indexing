@@ -51,8 +51,7 @@ def make_prediction(args):
         real_class = os.path.dirname(wav_fn).split('/')[-1]
         print('Actual class: {}, Predicted class: {}'.format(real_class, classes[y_pred]))
         results.append(y_mean)
-
-   np.save(os.path.join('logs', args.pred_fn), np.array(results))
+    np.save(os.path.join('logs', args.pred_fn), np.array(results))
 
 
 if __name__ == '__main__':

@@ -9,42 +9,47 @@ class Signup:
         self.root = root
         self.root.geometry("500x500")
         self.root.resizable(False, False)
-        self.root.configure(background="black")
+        self.root.configure(background="lightgrey")
         self.root.title("Signup")
 
-        title = Label(root, text="*-*-* Signup *-*-* ", width=20, font=("bold", 20), bg="black", fg='grey')
-        title.place(x=90, y=53)
+        frame_signup=Frame(root,bg='#078fc9')
+        frame_signup.place(x=50, y=20, width=400, height=55)
+        title = Label(text="Signup", width=10, font=('Arial Rounded MT Bold', 25) ,bg='#078fc9' ,fg='white')
+        title.place(x=140, y=25)
 
-        name = Label(root, text="Name", width=20, font=("bold", 10), bg="black", fg='grey')
-        name.place(x=48, y=130)
-        self.txt_name = Entry(root)
-        self.txt_name.place(x=240, y=130)
+        frame_entry=Frame(root,bg='white')
+        frame_entry.place(x=50,y=80,width=400,height=380)
 
-        Gender = Label(root, text="Gender", width=20, font=("bold", 10), bg="black", fg='grey')
-        Gender.place(x=50, y=180)
+        name = Label(root, text="Name:", width=10, font=('goudy old style', 15,'bold'), bg="white", fg='black')
+        name.place(x=100, y=100)
+        self.txt_name = Entry(root,font=('times new roman',15),bg='lightgrey')
+        self.txt_name.place(x=130, y=130,width=270,height=30)
+
+        Gender = Label(root, text="Gender", width=10, font=('goudy old style', 15,'bold'), bg="white", fg='black')
+        Gender.place(x=105, y=170)
         self.gender = StringVar()
         self.gender.set("Female")
-        self.btn_male = Radiobutton(root, text="Male", padx=5, variable=self.gender, value='Male', bg="black",
-                                    fg='grey').place(x=235, y=180)
-        self.btn_female = Radiobutton(root, text="Female", padx=20, variable=self.gender, value='Female', bg="black",
-                                      fg='grey').place(x=290, y=180)
+        self.btn_male = Radiobutton(root, text="Male", padx=5, variable=self.gender, value='Male', bg="white",font=(5),
+                                    fg='black').place(x=230, y=170)
+        self.btn_female = Radiobutton(root, text="Female", padx=20, variable=self.gender, value='Female', bg="white",font=(5),
+                                      fg='black').place(x=300, y=170)
 
-        username = Label(root, text="UserName", width=20, font=("bold", 10), bg="black", fg='grey')
-        username.place(x=56, y=230)
-        self.txt_username = Entry(root)
-        self.txt_username.place(x=240, y=230)
+        username = Label(root, text="User Name", width=10, font=('goudy old style', 15,'bold'), bg="white", fg='Black')
+        username.place(x=120, y=200)
+        self.txt_username = Entry(root,font=('times new roman',15),bg='lightgrey')
+        self.txt_username.place(x=130, y=230,width=270,height=30)
 
-        password = Label(root, text="Password", width=20, font=("bold", 10), bg="black", fg='grey')
-        password.place(x=56, y=280)
-        self.txt_password = Entry(root, show="*")
-        self.txt_password.place(x=240, y=280)
+        password = Label(root, text="Password", width=10, font=('goudy old style', 15,'bold'), bg="white", fg='black')
+        password.place(x=115, y=270)
+        self.txt_password = Entry(root, show="*",font=('times new roman',15),bg='lightgrey')
+        self.txt_password.place(x=130, y=300,width=270,height=30)
 
-        conpass = Label(root, text="Conform Password", width=20, font=("bold", 10), bg="black", fg='grey')
-        conpass.place(x=82, y=330)
-        self.txt_conpass = Entry(root, show="*")
-        self.txt_conpass.place(x=240, y=330)
-        btn_submit = Button(root, text='Submit', width=8, bg='grey', fg='black', command=self.DB_Conactivity).place(
-            x=220, y=380)
+        conpass = Label(root, text="Conform Password", width=20, font=('goudy old style', 15,'bold'), bg="white", fg='black')
+        conpass.place(x=98, y=340)
+        self.txt_conpass = Entry(root, show="*",font=('times new roman',15),bg='lightgrey')
+        self.txt_conpass.place(x=130, y=370,width=270,height=30)
+        btn_submit = Button(root, text='SUBMIT', width=8, bg='#078fc9', fg='white',font=('goudy old style', 15,'bold') ,command=self.DB_Conactivity).place(
+            x=130, y=410, height=35,width=270)
 
     def DB_Conactivity(self):
         if self.txt_name.get() == "" or self.txt_username.get() == "" or self.gender.get() == "Select" or self.txt_password.get() == "" or self.txt_conpass.get() == "":

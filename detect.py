@@ -5,7 +5,7 @@ import numpy as np
 
 
 model_path='models'
-source='C:/Users/rehan/Downloads/Video/9convert.com - Prichard Colon VS Terrel Williams.mp4'
+source='C:/Users/Ahsan Yousaf/Downloads/Video/9convert.com - Prichard Colon VS Terrel Williams.mp4'
 # load json and create model
 json_file = open(os.path.join(model_path,'model.json'), 'r')
 loaded_model_json = json_file.read()
