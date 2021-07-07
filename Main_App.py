@@ -289,7 +289,7 @@ class Main_App:
 
     #to search the user required category
     def search(self):
-        messagebox.showinfo("search", "we are searching here", parent=self.root)
+        #messagebox.showinfo("search", "we are searching here", parent=self.root)
         Frame.txt_name.get()
         audio_lists = ['speech', 'music']
         files_dict = {}
@@ -332,8 +332,8 @@ class Main_App:
         for item in task_list:
             lb.insert(END, item)
 
-        sb = Scrollbar(video_box)
-        sb.pack(side=RIGHT, fill=BOTH)
+        sb = Scrollbar(video_box,orient=VERTICAL)
+        sb.place(x='450',y='112')
 
         lb.config(yscrollcommand=sb.set)
         sb.config(command=lb.yview)
