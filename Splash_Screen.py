@@ -15,8 +15,8 @@ def login():
     system('User_Login.py')
 
 def signup():
-    splash_root.destroy()
-    system('User-Signup.py')
+    #splash_root.destroy()
+    system('User_Signup.py')
 
 
 def main():
