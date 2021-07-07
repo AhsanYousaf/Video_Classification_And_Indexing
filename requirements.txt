@@ -1,9 +1,4 @@
 moviepy
 tensorflow
 opencv-python
-numpy
-tqdm
-clean
 kapre
-sklearn
-matplotlib
