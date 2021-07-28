@@ -10,19 +10,29 @@ splash_root.geometry("800x600")
 
 splash_root.configure(background="lightgrey")
 
-def login():
-    #splash_root.destroy()
-    system('User_Login.py')
+background_image = PhotoImage(file="splash-01.png")
 
-def signup():
-    #splash_root.destroy()
-    system('User_Signup.py')
+background = Label(splash_root, image=background_image, bd=0)
+background.pack()
+
+
+
 
 
 def main():
 
     splash_root.destroy()
     root = Tk()
+
+    def login():
+        root.destroy()
+        system('User_Login.py')
+
+
+    def signup():
+        root.destroy()
+        system('User_Signup.py')
+
 
 
     root.title("Video Classifier and Indexer")
